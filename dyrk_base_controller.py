@@ -68,9 +68,9 @@ class BASE_controller():
     def read(self):
         values = self.sensor.read_temperature_humidity()
         print("Temp:\t{}\tHum:\t{}".format(round(values[0], 2), round(values[1], 2)))
+        return values
 
 if __name__ == '__main__':
-    import time
 
     base = BASE_controller()
 
