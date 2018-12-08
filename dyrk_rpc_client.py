@@ -2,7 +2,7 @@
 import requests
 import json
 
-known_addresses = {"localhost": "localhost",
+known_addresses = {"local": "'http://localhost:4000'",
                    "labitat" : "http://10.42.3.88:4000",}
 
 class DYRK_RPCclient():
@@ -37,8 +37,10 @@ class DYRK_RPCclient():
 
 if __name__ == "__main__":
     
-    c = DYRK_RPCclient(known_addresses['labitat'])
-    a = c.get_data(['dyrk'])
+#    c = DYRK_RPCclient(known_addresses['labitat'])
+    c = DYRK_RPCclient('http://localhost:4000')
+    a = c.call('ping', [])
+    #a = c.get_data(['dyrk'])
     print(a)
 
 #%%

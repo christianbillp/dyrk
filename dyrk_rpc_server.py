@@ -1,11 +1,11 @@
-#%%
+#%% pip install json-rpc
 from werkzeug.wrappers import Request, Response
 from werkzeug.serving import run_simple
 
 from jsonrpc import JSONRPCResponseManager, dispatcher
 
-from dyrk import BASE_controller
-from dyrk_logger import DYRK_logger
+#from dyrk_base_controller import BASE_controller
+#from dyrk_logger import DYRK_logger
 
 
 known_addresses = {"localhost": "localhost",

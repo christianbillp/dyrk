@@ -6,7 +6,8 @@
 # For deployment
 import os
 from sht import SHT31
-from neo import LED_controller
+#from neo import LED_controller
+from dyrk_configurator import DYRK_configurator
 
 class BASE_controller():
     """Desc."""
@@ -18,8 +19,8 @@ class BASE_controller():
         print("Pin configuration loaded")
         self.setup_pins([self.pin_configuration.items()])
         self.sensor = SHT31(address = 0x44)
-        self.LED = LED_controller()
-        self.LED.on = 1
+        #self.LED = LED_controller()
+        #self.LED.on = 1
 
     def do(self, function):
         """Executes a bash custom bash function and returns output"""
@@ -32,10 +33,8 @@ class BASE_controller():
            For prototyping, just return dictionary"""
 
         # Pinsetup
-        pin_configuration = {'6' : 'out', 
-                '13' : 'out',
-                '19' : 'out',               # Currently pump
-                }
+        dc = DYRK_configurator()
+        pin_configuration = dc.get_configuration('board_pins')
 
         return pin_configuration
 
@@ -73,7 +72,9 @@ class BASE_controller():
 if __name__ == '__main__':
 
     base = BASE_controller()
+    
 
+'''
     while True:
         selection = input("""1. Turn on relay
 2. Turn off relay
@@ -97,7 +98,7 @@ if __name__ == '__main__':
             base.read()
         else:
             print('Invalid selection')
-
+'''
 
 
 

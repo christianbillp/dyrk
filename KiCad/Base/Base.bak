@@ -140,17 +140,17 @@ $EndComp
 Wire Wire Line
 	8150 2000 7750 2000
 Wire Wire Line
-	7750 2000 7750 2500
+	7750 2000 7750 2100
 Wire Wire Line
 	8150 2500 7750 2500
 Connection ~ 7750 2500
 Wire Wire Line
-	7750 2500 7750 3000
+	7750 2500 7750 2600
 Wire Wire Line
 	8150 3000 7750 3000
 Connection ~ 7750 3000
 Wire Wire Line
-	7750 3000 7750 3500
+	7750 3000 7750 3100
 Wire Wire Line
 	7850 2300 7650 2300
 Wire Wire Line
@@ -703,7 +703,7 @@ Wire Wire Line
 Text Label 4950 1950 0    50   ~ 0
 PWM0
 Wire Wire Line
-	7750 3500 7750 3750
+	7750 3500 7750 3600
 Wire Notes Line
 	6350 1350 6350 3650
 Wire Notes Line
@@ -820,21 +820,89 @@ Wire Wire Line
 	3900 1050 3900 1550
 Wire Wire Line
 	1750 4250 4400 4250
-Wire Bus Line
-	6550 1700 6550 2450
-Wire Bus Line
-	6550 2450 6550 3200
-Wire Bus Line
-	5300 2150 5300 2450
 $Comp
-L Connector:Conn_01x05_Male J?
+L Connector:Conn_01x05_Male J17
 U 1 1 5C021A01
 P 5500 4150
-F 0 "J?" H 5606 4528 50  0000 C CNN
+F 0 "J17" H 5606 4528 50  0000 C CNN
 F 1 "Conn_01x05_Male" H 5606 4437 50  0000 C CNN
 F 2 "" H 5500 4150 50  0001 C CNN
 F 3 "~" H 5500 4150 50  0001 C CNN
 	1    5500 4150
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R R4
+U 1 1 5C0377B8
+P 7650 2450
+F 0 "R4" H 7580 2404 50  0000 R CNN
+F 1 "10k" H 7580 2495 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7580 2450 50  0001 C CNN
+F 3 "~" H 7650 2450 50  0001 C CNN
+	1    7650 2450
+	-1   0    0    1   
+$EndComp
+Connection ~ 7650 2300
+Wire Wire Line
+	7650 2600 7750 2600
+Connection ~ 7750 2600
+Wire Wire Line
+	7750 2600 7750 3000
+$Comp
+L Device:R R3
+U 1 1 5C056A68
+P 7650 1950
+F 0 "R3" H 7580 1904 50  0000 R CNN
+F 1 "10k" H 7580 1995 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7580 1950 50  0001 C CNN
+F 3 "~" H 7650 1950 50  0001 C CNN
+	1    7650 1950
+	-1   0    0    1   
+$EndComp
+Connection ~ 7650 1800
+Wire Wire Line
+	7650 2100 7750 2100
+Connection ~ 7750 2100
+Wire Wire Line
+	7750 2100 7750 2500
+$Comp
+L Device:R R5
+U 1 1 5C05EA7B
+P 7650 2950
+F 0 "R5" H 7580 2904 50  0000 R CNN
+F 1 "10k" H 7580 2995 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7580 2950 50  0001 C CNN
+F 3 "~" H 7650 2950 50  0001 C CNN
+	1    7650 2950
+	-1   0    0    1   
+$EndComp
+Connection ~ 7650 2800
+$Comp
+L Device:R R6
+U 1 1 5C05EACF
+P 7650 3450
+F 0 "R6" H 7580 3404 50  0000 R CNN
+F 1 "10k" H 7580 3495 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7580 3450 50  0001 C CNN
+F 3 "~" H 7650 3450 50  0001 C CNN
+	1    7650 3450
+	-1   0    0    1   
+$EndComp
+Connection ~ 7650 3300
+Wire Wire Line
+	7650 3600 7750 3600
+Connection ~ 7750 3600
+Wire Wire Line
+	7750 3600 7750 3750
+Wire Wire Line
+	7650 3100 7750 3100
+Wire Bus Line
+	6550 2450 6550 3200
+Wire Bus Line
+	6550 1700 6550 2450
+Wire Bus Line
+	5300 2150 5300 2450
+Connection ~ 7750 3100
+Wire Wire Line
+	7750 3100 7750 3500
 $EndSCHEMATC

@@ -296,7 +296,7 @@ Wire Wire Line
 	3350 5650 3350 5750
 Connection ~ 3350 6350
 $Comp
-L NewConnector:Raspberry_Pi_2_3_0 J1
+L Base-rescue:Raspberry_Pi_2_3_0-NewConnector J1
 U 1 1 5BFC5D1D
 P 4100 2850
 F 0 "J1" H 4100 4328 50  0000 C CNN
@@ -821,17 +821,6 @@ Wire Wire Line
 Wire Wire Line
 	1750 4250 4400 4250
 $Comp
-L Connector:Conn_01x05_Male J17
-U 1 1 5C021A01
-P 5500 4150
-F 0 "J17" H 5606 4528 50  0000 C CNN
-F 1 "Conn_01x05_Male" H 5606 4437 50  0000 C CNN
-F 2 "" H 5500 4150 50  0001 C CNN
-F 3 "~" H 5500 4150 50  0001 C CNN
-	1    5500 4150
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R4
 U 1 1 5C0377B8
 P 7650 2450
@@ -896,13 +885,13 @@ Wire Wire Line
 	7750 3600 7750 3750
 Wire Wire Line
 	7650 3100 7750 3100
+Connection ~ 7750 3100
+Wire Wire Line
+	7750 3100 7750 3500
 Wire Bus Line
 	6550 2450 6550 3200
 Wire Bus Line
 	6550 1700 6550 2450
 Wire Bus Line
 	5300 2150 5300 2450
-Connection ~ 7750 3100
-Wire Wire Line
-	7750 3100 7750 3500
 $EndSCHEMATC
